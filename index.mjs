@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import fs from "fs";
+import fs from "fs/promises";
 
 
 let response = await inquirer
@@ -56,78 +56,20 @@ let response = await inquirer
 
 console.log(response);
 
+let readMeText = `
+#description ${description}
+
+## second largest heading
+###### the smallest heading
+    `
+    fs.writeFile("README.md", readMeText, (err) =>
+    err? console.log(err) : console.log("Success!")
+);
+
+
         
-                                        //.then((answers) => {  
-                                            
-                                        //     console.log(answers);
+                                    
                                         
-                                        //     fs.writeFile("README.md", generateMarkdown(answers), (err) => {
-                                        
-                                        //         if (err) {
-                                        
-                                        //             console.log(err);
-                                        
-                                        //         } else {
-                                        
-                                        //             console.log("Successfully wrote to README.md");
-                                        
-                                        //         }
-                                        
-                                        //     });
-                                        
-                                        // });
-                                        
-                                        //.then((answers) => {  
-                                        
-                                        //     console.log(answers);
-                                        
-                                        //     fs.writeFile("README.md", generateMarkdown(answers), (err) => {
-                                        
-                                        //         if (err) {
-                                        
-                                        //             console.log(err);
-                                        
-                                        //         } else {
-                                        
-                                        //             console.log("Successfully wrote to README.md");
-                                        
-                                        //         }
-                                        
-                                        //     });
-                                        
-                                        // });
-                                        
-                                        //.then((answers) => {  
-                                        
-                                        //     console.log(answers);
-                                        
-                                        //     fs.writeFile("README.md", generateMarkdown(answers), (err) => {
-                                        
-                                        //         if (err) {
-                                        
-                                        //             console.log(err);
-                                        
-                                        //         } else {
-                                        
-                                        //             console.log("Successfully wrote to README.md");
-                                        
-                                        //         }
-                                        
-                                        //     });
-                                        
-                                        // });
-                                        
-                                        //.then((answers) => {  
-                                        
-                                        //     console.log(answers);
-                                        
-                                        //     fs.writeFile("README.md", generateMarkdown(answers), (err) => {
-                                        
-                                        //         if (err) {
-                                        
-                                        //             console.log(err);
-                                        
-                                        //         } else {
-                                        
-                                        //             console.log("Successfully wrote to README.md");
+                                      
+
 
